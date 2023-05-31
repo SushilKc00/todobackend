@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
-export const dbconnection = async()=>{
-    await mongoose.connect("mongodb://localhost:27017/todo")
-    console.log("db connect")
-}
-
+export const dbconnection = async (url: any) => {
+  await mongoose.connect(url);
+  console.log("db connect");
+};

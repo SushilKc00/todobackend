@@ -5,6 +5,7 @@ import { dbconnection } from "./database/dbconfig";
 import todorouter from "./routes/todorouter";
 
 const app = express();
+let url: any = process.env.DB_URL;
 let Port: Number = 5000;
 
 //midelwares
@@ -17,7 +18,7 @@ app.use("/api/auth", router);
 app.use("/todo", todorouter);
 
 //dbconnection
-dbconnection();
+dbconnection(url);
 
 app.listen(Port, (): void => {
   console.log("server running");
