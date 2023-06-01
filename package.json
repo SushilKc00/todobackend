@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.ts"
+    "dev": "nodemon ./src/index.ts",
+    "start" :"tsc && node ./built/index.js"
   },
   "keywords": [],
   "author": "",
